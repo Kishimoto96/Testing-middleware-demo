@@ -1,0 +1,39 @@
+{
+  "name": "curriculum-backend-testing-controllers",
+  "version": "1.0.0",
+  "description": "Testing Controllers",
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "test": "IS_JEST=1 jest",
+    "lint": "eslint --ignore-path .gitignore .",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\"",
+    "validate": "npm run format && npm run lint",
+    "validate-staged": "lint-staged",
+    "postinstall": "husky install && husky add .husky/pre-commit \"npm run validate-staged\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReCoded-Org/curriculum-backend-testing-controllers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReCoded-Org/curriculum-backend-testing-controllers/issues"
+  },
+  "homepage": "https://github.com/ReCoded-Org/curriculum-backend-testing-controllers#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.2.1",
+    "mongoose": "^6.0.15"
+  },
+  "devDependencies": {
+    "eslint": "^8.4.0",
+    "husky": "^7.0.4",
+    "jest": "^27.4.0",
+    "lint-staged": "^12.1.2",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1"
+  }
+}

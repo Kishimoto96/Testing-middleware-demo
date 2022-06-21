@@ -11,13 +11,6 @@ app.get("/", (req, res) => {
   res.send("👋 Hello");
 });
 
-app.get("/user", logger, (req, res) => {
-  res.status(200).json({ name: "Bestun" });
-});
-
-app.get("/user/:id", logger, (req, res) => {
-  res.status(200).json({ name: "Sara" });
-});
 
 app.listen(port, () => console.log(`Application running on port ${port}`));
 
